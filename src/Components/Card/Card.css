@@ -1,0 +1,210 @@
+.card {
+  width: 700px; /* Largura do card maior */
+  height: 300px; /* Altura do card maior */
+  background-size: cover; /* Cobrir o fundo */
+  background-position: center; /* Centralizar a imagem */
+  display: flex;
+  align-items: flex-end; /* Alinha o conteúdo no fundo do card */
+  justify-content: center; /* Centraliza horizontalmente */
+  color: white;
+  font-size: 1.5rem;
+  position: relative;
+  transition: border-color 0.3s ease; /* Animação para a borda ao passar o mouse */
+  border-radius: 20px;
+  border: 1px solid rgba(219, 219, 219, 0.13);
+}
+
+.card-text {
+  transition: transform 0.3s ease; /* Adiciona transição para o texto */
+  text-align: start;
+  position: absolute; /* Posiciona o texto de forma absoluta */
+  bottom: 10px; /* Espaçamento da parte inferior do card */
+  left: 40px; /* Espaçamento da esquerda */
+  bottom: 20px;
+  width: 300px;
+  font-weight: bold;
+}
+
+.card-text.active {
+  transform: translateY(-10px);
+}
+
+.large-card {
+  margin-right: 20px; /* Spacing between large card and smaller ones */
+}
+
+.small-cards {
+  display: flex; /* Use flexbox for small cards */
+  flex-direction: column; /* Stack small cards vertically */
+}
+
+.small-cards .card {
+  width: 480px; /* Width of smaller card */
+  height: 140px; /* Height of smaller card */
+  margin: 10px 0; /* Vertical spacing between small cards */
+}
+
+.small-cards-below {
+  display: flex; /* Align new smaller cards */
+  justify-content: center; /* Center new cards horizontally */
+  margin-top: 20px; /* Spacing above smaller cards */
+}
+
+.large-card-below {
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+.btn-join {
+  position: absolute; /* Posiciona o botão de forma absoluta */
+  bottom: 20px; /* Espaçamento da parte inferior */
+  right: 20px; /* Espaçamento da direita */
+  margin: 0; /* Remove margem padrão */
+  padding: 15px 30px;
+  border: none;
+  outline: none;
+  color: #fff;
+  cursor: pointer;
+  z-index: 1; /* Garante que o botão fique acima de outros elementos */
+  border-radius: 12px;
+}
+
+.btn-join::after {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #40094a;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+.btn-join::before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #ff00c8,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 600%;
+  z-index: -1;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  filter: blur(8px);
+  animation: glowing 20s linear infinite;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+  opacity: 1;
+}
+
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.btn-join:active:after {
+  background: transparent;
+}
+
+.btn-join:active {
+  color: #000;
+  font-weight: bold;
+}
+
+/* Media query for responsiveness */
+@media (max-width: 1196px) {
+  .card {
+    width: 500px; /* Adjusted width for medium screens */
+    height: 140px; /* Adjusted height for medium screens */
+  }
+
+  .about {
+    flex-direction: column; /* Change flex direction to column */
+    align-items: center; /* Center all cards */
+  }
+
+  .small-cards-below {
+    flex-direction: column; /* Change flex direction to column */
+    align-items: center; /* Center all cards */
+  }
+
+  .small-cards {
+    flex-direction: column; /* Ensure small cards stack in a column */
+    align-items: center; /* Center small cards */
+  }
+
+  .small-cards .card {
+    width: 500px; /* Adjusted width for small cards */
+    height: 140px; /* Maintain height */
+  }
+
+  .large-card {
+    margin-right: 0; /* Remove right margin in column mode */
+    margin-bottom: 20px; /* Add bottom margin for spacing */
+  }
+
+  .large-card-below {
+    margin-right: 20px; /* Maintain right margin for spacing */
+  }
+}
+
+/* Media query for screens smaller than 480px */
+@media (max-width: 480px) {
+  .card {
+    width: 340px; /* Adjusted width for medium screens */
+    height: 120px; /* Adjusted height for medium screens */
+  }
+
+  .card-text {
+    left: 20px;
+  }
+
+  .about {
+    flex-direction: column; /* Change flex direction to column */
+    align-items: center; /* Center all cards */
+  }
+
+  .small-cards {
+    flex-direction: column; /* Ensure small cards stack in a column */
+    align-items: center; /* Center small cards */
+  }
+
+  .small-cards .card {
+    width: 340px; /* Adjusted width for medium screens */
+    height: 150px; /* Adjusted height for medium screens */
+  }
+
+  .large-card {
+    margin-right: 0; /* Remove right margin in column mode */
+    margin-bottom: 10px; /* Adjust bottom margin for spacing */
+  }
+
+  .large-card-below {
+    margin-right: 20px; /* Maintain right margin for spacing */
+  }
+
+  .btn-join {
+    bottom: 90px;
+    right: 80px;
+    width: calc(50% + 4px);
+    height: calc(20% + 16px);
+  }
+}
