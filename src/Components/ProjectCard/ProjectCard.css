@@ -1,1 +1,140 @@
- 
+.projects-section {
+  margin-top: 40px;
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 40px;
+  justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.project-card {
+  background-color: #2b063c;
+  border: 1px solid rgba(201, 201, 201, 0.411);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  min-height: 400px;
+  max-width: 600px;
+  padding: 20px;
+}
+
+.project-card:hover {
+  cursor: pointer;
+  transform: perspective(800px) rotateX(20deg);
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.3);
+  transform-origin: bottom;
+}
+
+.project-image-container {
+  margin-bottom: 15px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.project-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.project-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0;
+  margin-bottom: 5px;
+  text-align: left;
+  margin-left: 10px;
+}
+
+.project-subtitle {
+  font-size: 1rem;
+  color: #666;
+  margin: 0;
+  margin-bottom: 10px;
+  text-align: left;
+  margin-left: 10px;
+}
+
+.project-description {
+  text-align: left;
+  margin: 0;
+  margin-bottom: 15px;
+  margin-left: 10px;
+}
+
+.technology-icon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000000;
+  border: 1px solid rgba(0, 128, 0, 0.267);
+  border-radius: 50%;
+  padding: 5px;
+  position: relative;
+  top: -10px;
+  margin-right: -15px;
+}
+
+.tech-logo {
+  width: 30px;
+  height: 30px;
+}
+
+.button-tech-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.technology-icons {
+  display: flex;
+}
+
+.button-icon-container {
+  display: flex;
+  align-items: center;
+}
+
+.send-icon {
+  margin-left: 10px;
+  color: #cbacf9;
+  cursor: pointer;
+}
+
+.send-icon:hover {
+  color: #8f79af;
+}
+
+.text-button {
+  color: #cbacf9;
+  text-decoration: none;
+}
+
+.text-button:hover {
+  color: #8f79af;
+}
+
+@media (max-width: 480px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+    width: 340px;
+  }
+
+  .project-card {
+    min-height: 300px;
+    max-height: 350px;
+    padding: 15px;
+  }
+}

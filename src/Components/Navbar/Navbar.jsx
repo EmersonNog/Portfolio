@@ -9,12 +9,21 @@ const Navbar = () => {
     }
   };
 
+  const handleProjectsClick = () => {
+    const projectsSection = document.getElementById("projects-section");
+    if (projectsSection) {
+      projectsSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <div className="navbar">
       <div className="nav-item" onClick={handleHomeClick}>
         About
       </div>
-      <div className="nav-item">Projects</div>
+      <div className="nav-item" onClick={handleProjectsClick}>
+        Projects
+      </div>
       <div className="nav-item">Career</div>
       <div className="nav-item">Contact</div>
     </div>

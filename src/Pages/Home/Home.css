@@ -68,3 +68,12 @@ body {
     font-size: 0.8rem;
   }
 }
+
+/* Career CSS*/
+.career-title {
+  font-size: 3rem;
+}
+
+.career-text {
+  color: #cbacf9;
+}
