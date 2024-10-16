@@ -37,7 +37,7 @@ const About = () => {
           />
           <Card
             backgroundImage={background_card}
-            text="Do you want to start a project together?"
+            text="Let's start a project together!"
             showButton={true}
           />
         </div>

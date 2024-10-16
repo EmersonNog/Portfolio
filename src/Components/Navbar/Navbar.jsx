@@ -16,6 +16,13 @@ const Navbar = () => {
     }
   };
 
+  const handleCareerClick = () => {
+    const projectsSection = document.getElementById("career-title");
+    if (projectsSection) {
+      projectsSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <div className="navbar">
       <div className="nav-item" onClick={handleHomeClick}>
@@ -24,7 +31,9 @@ const Navbar = () => {
       <div className="nav-item" onClick={handleProjectsClick}>
         Projects
       </div>
-      <div className="nav-item">Career</div>
+      <div className="nav-item" onClick={handleCareerClick}>
+        Career
+      </div>
       <div className="nav-item">Contact</div>
     </div>
   );

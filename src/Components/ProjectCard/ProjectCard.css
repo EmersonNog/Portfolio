@@ -9,7 +9,6 @@
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 40px;
   justify-content: center;
-  width: 100%;
   margin: 0 auto;
   max-width: 1200px;
 }
@@ -21,7 +20,6 @@
   overflow: hidden;
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
   transition: transform 0.5s ease, box-shadow 0.5s ease;
-  min-height: 400px;
   max-width: 600px;
   padding: 20px;
 }
@@ -41,7 +39,7 @@
 
 .project-image {
   width: 100%;
-  height: auto;
+  height: 200px;
   object-fit: cover;
   border-radius: 10px;
 }
@@ -133,8 +131,12 @@
   }
 
   .project-card {
-    min-height: 300px;
-    max-height: 350px;
+    min-height: 430px;
+    max-height: 300px;
     padding: 15px;
+  }
+
+  .technology-icons {
+    margin-top: 10px;
   }
 }
