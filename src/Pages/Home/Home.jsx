@@ -1,4 +1,5 @@
 import React from "react";
+import { motion, useInView } from "framer-motion";
 import ParticleScreen from "../../Components/Particles/ParticleScreen";
 import GlowButton from "../../Components/ProjectButton/ProjectButton";
 import Navbar from "../../Components/Navbar/Navbar";
@@ -18,28 +19,59 @@ import "slick-carousel/slick/slick-theme.css";
 
 function Home() {
   const images = [Firebase, Mongodb, PgAdmin, Geoserver, Hostinger, Vercel];
+
+  const AnimatedSection = ({ children }) => {
+    const ref = React.useRef(null);
+    const inView = useInView(ref, { once: true });
+
+    return (
+      <motion.div
+        ref={ref}
+        initial={{ opacity: 0, y: 150 }}
+        animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 50 }}
+        transition={{ duration: 2 }}
+      >
+        {children}
+      </motion.div>
+    );
+  };
+
   return (
     <div className="banner-bg">
       <ParticleScreen />
       <div className="content">
         <Navbar />
-        <h1 className="introduction">Websites & Apps? I speak fluent code</h1>
-        <p className="name-title">
-          Transforming Concepts Into Seamless{" "}
-          <span id="ux">User Experiences</span>
-        </p>
-        <h2 className="developer-info">
-          Hi, I'm Nogueira, a Full Stack Developer based in Brazil
-        </h2>
-        <GlowButton />
-        <About />
-        <Projects />
-        <TimelineComponent />
-        {/* <ImageLine images={images} /> */}
 
-        <h1 className="who" id="who">
-          Who <span>I Am</span> (Building...)
-        </h1>
+        <AnimatedSection>
+          <h1 className="introduction">Websites & Apps? I speak fluent code</h1>
+
+          <p className="name-title">
+            Transforming Concepts Into Seamless{" "}
+            <span id="ux">User Experiences</span>
+          </p>
+          <h2 className="developer-info">
+            Hi, I'm Nogueira, a Full Stack Developer based in Brazil
+          </h2>
+          <GlowButton />
+        </AnimatedSection>
+
+        <AnimatedSection>
+          <About />
+        </AnimatedSection>
+
+        <AnimatedSection>
+          <Projects />
+        </AnimatedSection>
+
+        <AnimatedSection>
+          <TimelineComponent />
+        </AnimatedSection>
+
+        <AnimatedSection>
+          <h1 className="who" id="who">
+            Who <span>I Am</span> (Building...)
+          </h1>
+        </AnimatedSection>
       </div>
     </div>
   );
