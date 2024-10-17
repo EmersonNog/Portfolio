@@ -1,10 +1,11 @@
 import React from "react";
 import "./ProjectCard.css";
+import Slider from "react-slick";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
 
 const ProjectCard = ({
-  image,
+  images,
   title,
   subtitle,
   description,
@@ -12,10 +13,26 @@ const ProjectCard = ({
   buttonText,
   link,
 }) => {
+  const settings = {
+    speed: 1200,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+  };
+
   return (
     <div className="project-card">
       <div className="project-image-container">
-        <img src={image} alt={title} className="project-image" />
+        <Slider {...settings}>
+          {images.map((image, index) => (
+            <div key={index}>
+              <img
+                src={image}
+                alt={`${title} - ${index}`}
+                className="project-image"
+              />
+            </div>
+          ))}
+        </Slider>
       </div>
       <h3 className="project-title">{title}</h3>
       <h4 className="project-subtitle">{subtitle}</h4>

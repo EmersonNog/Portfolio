@@ -1,7 +1,7 @@
 .about {
-  display: flex; /* Use flexbox to align cards */
-  justify-content: center; /* Center cards horizontally */
-  flex-wrap: wrap; /* Allow cards to wrap to the next line */
-  margin: 0 auto; /* Center the container */
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0 auto;
   margin-top: 50px;
 }

@@ -1,53 +1,53 @@
 .card {
-  width: 700px; /* Largura do card maior */
-  height: 300px; /* Altura do card maior */
-  background-size: cover; /* Cobrir o fundo */
-  background-position: center; /* Centralizar a imagem */
+  width: 700px;
+  height: 300px;
+  background-size: cover;
+  background-position: center;
   display: flex;
-  align-items: flex-end; /* Alinha o conteúdo no fundo do card */
-  justify-content: center; /* Centraliza horizontalmente */
+  align-items: flex-end;
+  justify-content: center;
   color: white;
   font-size: 1.5rem;
   position: relative;
-  transition: border-color 0.3s ease; /* Animação para a borda ao passar o mouse */
+  transition: border-color 0.3s ease;
   border-radius: 20px;
   border: 1px solid rgba(219, 219, 219, 0.13);
 }
 
 .card-text {
-  transition: transform 0.3s ease; /* Adiciona transição para o texto */
+  transition: transform 0.3s ease;
   text-align: start;
-  position: absolute; /* Posiciona o texto de forma absoluta */
-  bottom: 10px; /* Espaçamento da parte inferior do card */
-  left: 40px; /* Espaçamento da esquerda */
+  position: absolute;
+  bottom: 10px;
+  left: 40px;
   bottom: 20px;
   width: 300px;
   font-weight: bold;
 }
 
-.card-text.active {
+.card:hover .card-text {
   transform: translateY(-10px);
 }
 
 .large-card {
-  margin-right: 20px; /* Spacing between large card and smaller ones */
+  margin-right: 20px;
 }
 
 .small-cards {
-  display: flex; /* Use flexbox for small cards */
-  flex-direction: column; /* Stack small cards vertically */
+  display: flex;
+  flex-direction: column;
 }
 
 .small-cards .card {
-  width: 480px; /* Width of smaller card */
-  height: 140px; /* Height of smaller card */
-  margin: 10px 0; /* Vertical spacing between small cards */
+  width: 480px;
+  height: 140px;
+  margin: 10px 0;
 }
 
 .small-cards-below {
-  display: flex; /* Align new smaller cards */
-  justify-content: center; /* Center new cards horizontally */
-  margin-top: 20px; /* Spacing above smaller cards */
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
 }
 
 .large-card-below {
@@ -57,73 +57,71 @@
 
 @media (max-width: 1196px) {
   .card {
-    width: 500px; /* Adjusted width for medium screens */
-    height: 140px; /* Adjusted height for medium screens */
+    width: 500px;
+    height: 140px;
   }
 
   .about {
-    flex-direction: column; /* Change flex direction to column */
-    align-items: center; /* Center all cards */
+    flex-direction: column;
+    align-items: center;
   }
 
   .small-cards-below {
-    flex-direction: column; /* Change flex direction to column */
-    align-items: center; /* Center all cards */
+    flex-direction: column;
+    align-items: center;
   }
 
   .small-cards {
-    flex-direction: column; /* Ensure small cards stack in a column */
-    align-items: center; /* Center small cards */
+    flex-direction: column;
+    align-items: center;
   }
 
   .small-cards .card {
-    width: 500px; /* Adjusted width for small cards */
-    height: 140px; /* Maintain height */
+    width: 500px;
+    height: 140px;
   }
 
   .large-card {
-    margin-right: 0; /* Remove right margin in column mode */
-    margin-bottom: 20px; /* Add bottom margin for spacing */
+    margin-right: 0;
+    margin-bottom: 20px;
   }
 
   .large-card-below {
-    margin-right: 20px; /* Maintain right margin for spacing */
+    margin-right: 20px;
   }
 }
 
-/* Media query for screens smaller than 480px */
 @media (max-width: 480px) {
   .card {
-    width: 340px; /* Adjusted width for medium screens */
-    height: 140px; /* Adjusted height for medium screens */
+    width: 340px;
+    height: 140px;
   }
 
   .card-text {
     left: 20px;
-    /* bottom: 10px; */
   }
 
   .about {
-    flex-direction: column; /* Change flex direction to column */
-    align-items: center; /* Center all cards */
+    flex-direction: column;
+    align-items: center;
   }
 
   .small-cards {
-    flex-direction: column; /* Ensure small cards stack in a column */
-    align-items: center; /* Center small cards */
+    flex-direction: column;
+    align-items: center;
   }
 
   .small-cards .card {
-    width: 340px; /* Adjusted width for medium screens */
-    height: 150px; /* Adjusted height for medium screens */
+    width: 340px;
+    height: 150px;
   }
 
   .large-card {
-    margin-right: 0; /* Remove right margin in column mode */
-    margin-bottom: 10px; /* Adjust bottom margin for spacing */
+    margin-right: 0;
+    margin-bottom: 10px;
   }
 
   .large-card-below {
-    margin-right: 20px; /* Maintain right margin for spacing */
+    margin-right: 20px;
   }
 }

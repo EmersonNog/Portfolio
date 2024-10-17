@@ -17,7 +17,7 @@ const Navbar = () => {
   };
 
   const handleCareerClick = () => {
-    const projectsSection = document.getElementById("career-title");
+    const projectsSection = document.getElementById("career");
     if (projectsSection) {
       projectsSection.scrollIntoView({ behavior: "smooth" });
     }

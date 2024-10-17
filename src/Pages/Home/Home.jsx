@@ -1,12 +1,23 @@
 import React from "react";
-import "../Home/Home.css";
 import ParticleScreen from "../../Components/Particles/ParticleScreen";
 import GlowButton from "../../Components/ProjectButton/ProjectButton";
 import Navbar from "../../Components/Navbar/Navbar";
 import About from "../../Pages/About/About";
 import Projects from "../../Pages/Project/Project";
+import TimelineComponent from "../../Components/TimelineComponent/TimelineComponent";
+import ImageLine from "../../Components/ImageLine/ImageLine";
+import Firebase from "../../Assets/Images/services/firebase.svg";
+import Hostinger from "../../Assets/Images/services/hostinger.png";
+import PgAdmin from "../../Assets/Images/services/pgadmin.jpg";
+import Geoserver from "../../Assets/Images/services/geoserver.png";
+import Mongodb from "../../Assets/Images/services/mongodb.png";
+import Vercel from "../../Assets/Images/services/vercel.png";
+import "../Home/Home.css";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 function Home() {
+  const images = [Firebase, Mongodb, PgAdmin, Geoserver, Hostinger, Vercel];
   return (
     <div className="banner-bg">
       <ParticleScreen />
@@ -23,9 +34,12 @@ function Home() {
         <GlowButton />
         <About />
         <Projects />
-        <h2 className="career-title" id="career-title">
-          My Professional <span className="career-text">Career</span>
-        </h2>
+        <TimelineComponent />
+        {/* <ImageLine images={images} /> */}
+
+        <h1 className="who" id="who">
+          Who <span>I Am</span> (Building...)
+        </h1>
       </div>
     </div>
   );

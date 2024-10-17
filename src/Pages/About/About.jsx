@@ -1,12 +1,12 @@
 // Components/About.js
 import React from "react";
 import Card from "../../Components/Card/Card";
-import b1 from "../../Assets/Images/b1.svg";
-import b4 from "../../Assets/Images/b4.svg";
-import b5 from "../../Assets/Images/b5.svg";
-import globe from "../../Assets/Images/globe.jpg";
-import stack from "../../Assets/Images/stack.jpg";
-import background_card from "../../Assets/Images/background_card.jpg";
+import b1 from "../../Assets/Images/backgrounds/b1.svg";
+import b4 from "../../Assets/Images/backgrounds/b4.svg";
+import b5 from "../../Assets/Images/backgrounds/b5.svg";
+import globe from "../../Assets/Images/backgrounds/globe.jpg";
+import stack from "../../Assets/Images/backgrounds/stack.jpg";
+import background_card from "../../Assets/Images/backgrounds/background_card.jpg";
 import "./About.css";
 
 const About = () => {

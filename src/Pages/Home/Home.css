@@ -4,17 +4,17 @@ body {
   padding: 0;
   height: 100%;
   font-family: "Hanken Grotesk", sans-serif;
-  overflow-x: hidden; /* Evita scroll horizontal indesejado */
+  overflow-x: hidden;
 }
 
 .banner-bg {
-  background-image: url("../../Assets/Images/background.jpg");
+  background-image: url("../../Assets/Images/backgrounds/background.jpg");
   background-size: cover;
   background-position: center;
   min-height: 100vh;
   min-width: 100%;
   display: flex;
-  flex-direction: column; /* Permite que o conteúdo siga a estrutura de coluna */
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   color: white;
@@ -22,17 +22,17 @@ body {
 }
 
 .content {
-  margin-top: 100px; /* Espaçamento acima */
+  margin-top: 100px;
   z-index: 2;
-  text-align: center; /* Centraliza o texto horizontalmente */
+  text-align: center;
   position: relative;
 }
 
 .introduction,
 .name-title,
 .developer-info {
-  margin: 0; /* Remove a margem padrão */
-  padding: 5px 0; /* Adiciona um pouco de espaço vertical entre os textos */
+  margin: 0;
+  padding: 5px 0;
 }
 
 .introduction {
@@ -44,8 +44,8 @@ body {
 .name-title {
   font-size: 4rem;
   font-weight: bold;
-  max-width: 700px; /* Limita a largura do título */
-  margin: 0 auto; /* Centraliza o título */
+  max-width: 700px;
+  margin: 0 auto;
 }
 
 .developer-info {
@@ -69,17 +69,17 @@ body {
   }
 }
 
-/* Career CSS*/
-.career-title {
-  font-size: 3rem;
+.who {
+  font-size: 4rem;
+  margin-bottom: 60px;
 }
 
-.career-text {
+.who span {
   color: #cbacf9;
 }
 
 @media (max-width: 480px) {
-  .career-title {
+  .who {
     font-size: 2.8rem;
   }
 }

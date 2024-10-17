@@ -1,7 +1,7 @@
 .projects-section {
   margin-top: 40px;
   text-align: center;
-  margin-bottom: 100px;
+  margin-bottom: 80px;
 }
 
 .projects-grid {
@@ -18,7 +18,7 @@
   border: 1px solid rgba(201, 201, 201, 0.411);
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 2.15);
   transition: transform 0.5s ease, box-shadow 0.5s ease;
   max-width: 600px;
   padding: 20px;
@@ -26,9 +26,7 @@
 
 .project-card:hover {
   cursor: pointer;
-  transform: perspective(800px) rotateX(20deg);
-  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.3);
-  transform-origin: bottom;
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 13);
 }
 
 .project-image-container {
