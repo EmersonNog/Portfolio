@@ -1,0 +1,111 @@
+.InfoBox {
+  height: 300px;
+  width: 300px;
+  margin: 0 auto;
+  background: #0c1327;
+  text-align: left;
+  position: relative;
+  display: flex; /* Usa flexbox para alinhar a imagem e o texto */
+  align-items: center; /* Alinha verticalmente no centro */
+  border-radius: 30px;
+  justify-content: center;
+}
+
+.InfoBox-image {
+  width: 100px;
+  height: 100px;
+  object-fit: fill; /* Ajusta a imagem para cobrir o espaço */
+  margin-right: 20px; /* Espaçamento entre a imagem e o texto */
+}
+
+.InfoBox-text-container {
+  display: flex;
+  flex-direction: column; /* Coloca o texto e o subtítulo um abaixo do outro */
+  justify-content: center; /* Alinha verticalmente no centro */
+}
+
+.InfoBox-text {
+  font-size: 1.8em; /* Tamanho do subtítulo */
+  margin: 10px 0; /* Remove margens padrão */
+}
+
+.InfoBox-subtitle {
+  font-size: 0.9em; /* Tamanho do subtítulo */
+  color: #b6b6b6; /* Cor do subtítulo, ajuste conforme necessário */
+  max-width: 400px;
+  margin: 0; /* Remove margens padrão */
+}
+
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+.InfoBox::after,
+.InfoBox::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: conic-gradient(
+    from var(--angle),
+    transparent 90%,
+    rgb(39, 194, 255)
+  );
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  z-index: -1;
+  padding: 3px;
+  animation: 3s spin linear infinite;
+  border-radius: 30px;
+}
+
+.InfoBox::before {
+  filter: blur(1.5rem);
+  opacity: 0.5;
+}
+
+@keyframes spin {
+  from {
+    --angle: 0deg;
+  }
+  to {
+    --angle: 360deg;
+  }
+}
+
+@media (max-width: 1196px) {
+  .InfoBox-text {
+    max-width: 300px;
+  }
+
+  .InfoBox-subtitle {
+    max-width: 320px;
+  }
+}
+
+@media (max-width: 480px) {
+  .InfoBox {
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .InfoBox-text {
+    margin-left: 20px;
+    font-size: 1em;
+  }
+
+  .InfoBox-subtitle {
+    margin-left: 20px;
+    font-size: 0.6;
+    max-width: 290px;
+  }
+
+  .InfoBox-image {
+    width: 50px;
+    height: 50px;
+    margin-left: 20px;
+  }
+}

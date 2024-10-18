@@ -14,7 +14,7 @@
 }
 
 .project-card {
-  background-color: #2b063c;
+  background-color: #0c1327;
   border: 1px solid rgba(201, 201, 201, 0.411);
   border-radius: 10px;
   overflow: hidden;
@@ -68,8 +68,8 @@
 }
 
 .technology-icon {
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -78,13 +78,13 @@
   border-radius: 50%;
   padding: 5px;
   position: relative;
-  top: -10px;
-  margin-right: -15px;
+  top: 0px;
+  margin-right: -12px;
 }
 
 .tech-logo {
-  width: 30px;
-  height: 30px;
+  width: 20px;
+  height: 20px;
 }
 
 .button-tech-container {
@@ -120,6 +120,17 @@
 
 .text-button:hover {
   color: #8f79af;
+}
+
+@media (max-width: 1196px) {
+  .project-card {
+    max-width: 500px;
+  }
+
+  .projects-grid {
+    width: 340px;
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 480px) {

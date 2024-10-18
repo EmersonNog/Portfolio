@@ -68,18 +68,3 @@ body {
     font-size: 0.8rem;
   }
 }
-
-.who {
-  font-size: 4rem;
-  margin-bottom: 60px;
-}
-
-.who span {
-  color: #cbacf9;
-}
-
-@media (max-width: 480px) {
-  .who {
-    font-size: 2.8rem;
-  }
-}

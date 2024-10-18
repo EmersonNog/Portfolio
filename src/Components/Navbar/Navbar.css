@@ -28,7 +28,7 @@
   color: #ff00c8;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1196px) {
   .navbar {
     width: 45%;
     justify-content: space-between;
@@ -40,7 +40,7 @@
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 580px) {
   .navbar {
     width: 80%;
   }
