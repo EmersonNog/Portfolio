@@ -27,8 +27,8 @@ const ChatComponent = () => {
 
     const conversationContext =
       chatHistory
-        .map((entry) => `Usuário: ${entry.question}\nZyra: ${entry.answer}`)
-        .join("\n") + `\nUsuário: ${question}`;
+        .map((entry) => `User: ${entry.question}\nZyra: ${entry.answer}`)
+        .join("\n") + `\nUser: ${question}`;
 
     try {
       const response = await axios({
@@ -82,7 +82,7 @@ const ChatComponent = () => {
             chatHistory.map((entry, index) => (
               <div key={index}>
                 <div className="user-message">
-                  <strong>Usuário: </strong>
+                  <strong>User: </strong>
                   {entry.question}
                 </div>
                 <div className="zyra-message">
