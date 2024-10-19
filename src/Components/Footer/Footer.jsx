@@ -34,7 +34,7 @@ function Footer() {
           </div>
           <div className="icon-box">
             <a
-              href="https://api.whatsapp.com/send/?phone=89999339734"
+              href="https://api.whatsapp.com/send/?phone=5589999339734"
               target="_blank"
               rel="noopener noreferrer"
             >
