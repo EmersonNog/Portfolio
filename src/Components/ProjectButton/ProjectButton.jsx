@@ -13,8 +13,7 @@ const GlowButton = () => {
 
   return (
     <button className="btn" onClick={handleProjectsClick}>
-      See my work
-      <FontAwesomeIcon icon={faPaperPlane} className="icon" />{" "}
+      See my work <FontAwesomeIcon icon={faPaperPlane} className="icon" />
     </button>
   );
 };

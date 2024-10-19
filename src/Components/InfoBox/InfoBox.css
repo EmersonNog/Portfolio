@@ -5,8 +5,8 @@
   background: #0c1327;
   text-align: left;
   position: relative;
-  display: flex; /* Usa flexbox para alinhar a imagem e o texto */
-  align-items: center; /* Alinha verticalmente no centro */
+  display: flex;
+  align-items: center;
   border-radius: 30px;
   justify-content: center;
 }
@@ -14,24 +14,24 @@
 .InfoBox-image {
   width: 100px;
   height: 100px;
-  object-fit: fill; /* Ajusta a imagem para cobrir o espaço */
-  margin-right: 20px; /* Espaçamento entre a imagem e o texto */
+  object-fit: fill;
+  margin-right: 20px;
 }
 
 .InfoBox-text-container {
   display: flex;
-  flex-direction: column; /* Coloca o texto e o subtítulo um abaixo do outro */
-  justify-content: center; /* Alinha verticalmente no centro */
+  flex-direction: column;
+  justify-content: center;
 }
 
 .InfoBox-text {
-  font-size: 1.8em; /* Tamanho do subtítulo */
-  margin: 10px 0; /* Remove margens padrão */
+  font-size: 1.8em;
+  margin: 10px 0;
 }
 
 .InfoBox-subtitle {
-  font-size: 0.9em; /* Tamanho do subtítulo */
-  color: #b6b6b6; /* Cor do subtítulo, ajuste conforme necessário */
+  font-size: 0.9em;
+  color: #b6b6b6;
   max-width: 400px;
   margin: 0; /* Remove margens padrão */
 }

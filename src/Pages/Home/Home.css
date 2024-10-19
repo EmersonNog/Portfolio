@@ -5,6 +5,7 @@ body {
   height: 100%;
   font-family: "Hanken Grotesk", sans-serif;
   overflow-x: hidden;
+  user-select: none;
 }
 
 .banner-bg {
@@ -26,45 +27,4 @@ body {
   z-index: 2;
   text-align: center;
   position: relative;
-}
-
-.introduction,
-.name-title,
-.developer-info {
-  margin: 0;
-  padding: 5px 0;
-}
-
-.introduction {
-  font-size: 1.2rem;
-  color: #cbacf9;
-  margin-top: 10px;
-}
-
-.name-title {
-  font-size: 4rem;
-  font-weight: bold;
-  max-width: 700px;
-  margin: 0 auto;
-}
-
-.developer-info {
-  font-size: 2rem;
-  color: #dfcbfc;
-}
-
-#ux {
-  color: #cbacf9;
-}
-
-@media (max-width: 768px) {
-  .name-title {
-    font-size: 2.5rem;
-  }
-  .introduction {
-    font-size: 1rem;
-  }
-  .developer-info {
-    font-size: 0.8rem;
-  }
 }

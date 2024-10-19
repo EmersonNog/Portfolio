@@ -8,9 +8,9 @@
   max-width: 800px;
   margin: 20px auto;
   margin-bottom: 40px;
-  background: #0c1327; /* Darker container */
+  background: #0c1327;
   border-radius: 10px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* More pronounced shadow */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
   padding: 20px;
 }
 
@@ -18,8 +18,8 @@
   margin-bottom: 10px;
   padding: 10px;
   border-radius: 10px;
-  background-color: #1f1f1f; /* Darker background for loading message */
-  color: #ffcc00; /* Bright color for loading text */
+  background-color: #1f1f1f;
+  color: #ffcc00;
   text-align: center;
 }
 
@@ -40,12 +40,12 @@
 }
 
 .chat-box {
-  border: 1px solid #333; /* Dark border */
+  border: 1px solid #333;
   border-radius: 8px;
-  padding: 10px;
+  padding: 10px 10px 0 10px;
   height: 200px;
   overflow-y: auto;
-  background-color: #242b3f; /* Slightly lighter than the container */
+  background-color: #242b3f;
 }
 
 .message-container {
@@ -59,10 +59,10 @@
   margin-bottom: 10px;
   padding: 10px;
   border-radius: 10px;
-  background-color: #cbacf9; /* Blue background for user message */
-  color: #000; /* White text */
-  max-width: 100%; /* Limit width */
-  word-wrap: break-word; /* Break long words */
+  background-color: #cbacf9;
+  color: #000;
+  max-width: 100%;
+  word-wrap: break-word;
 }
 
 .zyra-message {
@@ -72,25 +72,25 @@
   margin-bottom: 10px;
   padding: 10px;
   border-radius: 10px;
-  background-color: #444; /* Dark background for Zyra's message */
-  color: #ffffff; /* White text */
-  max-width: 100%; /* Limit width */
-  word-wrap: break-word; /* Break long words */
+  background-color: #444;
+  color: #ffffff;
+  max-width: 100%;
+  word-wrap: break-word;
 }
 
 .chat-input {
   width: 100%;
-  border: 1px solid #555; /* Dark border */
+  border: 1px solid #555;
   border-radius: 5px;
   padding: 10px;
   margin-top: 10px;
   resize: none;
-  background-color: #333; /* Dark background for input */
-  color: #ffffff; /* White text for input */
+  background-color: #333;
+  color: #ffffff;
 }
 
 .chat-button {
-  background-color: #6200ea; /* Purple background */
+  background-color: #6200ea;
   color: white;
   border: none;
   padding: 10px;
@@ -102,13 +102,13 @@
 }
 
 .chat-button:hover {
-  background-color: #3700b3; /* Darker purple on hover */
+  background-color: #3700b3;
 }
 
 .chat-button.disabled {
-  background-color: #555; /* Dark grey for disabled button */
-  color: #aaa; /* Lighter grey text for disabled button */
-  cursor: not-allowed; /* Change cursor for disabled button */
+  background-color: #555;
+  color: #aaa;
+  cursor: not-allowed;
 }
 
 @media (max-width: 850px) {
@@ -129,6 +129,12 @@
   }
 }
 
+@media (max-width: 625px) {
+  .chat-container {
+    max-width: 480px;
+  }
+}
+
 @media (max-width: 480px) {
   .chat-container {
     max-width: 350px;
@@ -140,7 +146,7 @@
 
   .chat-box {
     padding: 10px;
-    height: 200px;
+    height: 230px;
   }
 
   .chat-title {
@@ -162,5 +168,11 @@
 
   .chat-input {
     height: 50px;
+  }
+
+  .loading-message {
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 12px;
   }
 }

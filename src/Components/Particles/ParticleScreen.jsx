@@ -1,7 +1,6 @@
 import { useCallback } from "react";
 import Particles from "react-particles";
-//import { loadFull } from "tsparticles"; // if you are going to use `loadFull`, install the "tsparticles" package too.
-import { loadSlim } from "tsparticles-slim"; // if you are going to use `loadSlim`, install the "tsparticles-slim" package too.
+import { loadSlim } from "tsparticles-slim";
 
 function ParticleScreen() {
   const particlesInit = useCallback(async (engine) => {
@@ -45,7 +44,7 @@ function ParticleScreen() {
             distance: 150,
             enable: true,
             opacity: 0.5,
-            width: 1,
+            width: 0.5,
           },
           move: {
             direction: "none",
@@ -60,7 +59,7 @@ function ParticleScreen() {
           number: {
             density: {
               enable: true,
-              area: 800,
+              area: 900,
             },
             value: 80,
           },

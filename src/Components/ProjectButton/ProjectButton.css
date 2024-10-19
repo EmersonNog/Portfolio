@@ -52,7 +52,16 @@
   animation: glowing 20s linear infinite;
   transition: opacity 0.3s ease-in-out;
   border-radius: 10px;
-  opacity: 1; /* Mantém a opacidade sempre visível */
+  opacity: 1;
+}
+
+.btn:active:after {
+  background: transparent;
+}
+
+.btn:active {
+  color: #000;
+  font-weight: bold;
 }
 
 @keyframes glowing {
@@ -67,11 +76,14 @@
   }
 }
 
-.btn:active:after {
-  background: transparent;
+@media (max-width: 1115px) {
+  .btn {
+    margin-top: 30px;
+  }
 }
 
-.btn:active {
-  color: #000;
-  font-weight: bold;
+@media (max-width: 480px) {
+  .btn {
+    margin-top: 20px;
+  }
 }

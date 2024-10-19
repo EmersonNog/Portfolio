@@ -2,50 +2,32 @@ import React from "react";
 import "./Navbar.css";
 
 const Navbar = () => {
-  const handleHomeClick = () => {
-    const aboutSection = document.getElementById("about");
-    if (aboutSection) {
-      aboutSection.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-
-  const handleProjectsClick = () => {
-    const projectsSection = document.getElementById("projects-section");
-    if (projectsSection) {
-      projectsSection.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-
-  const handleCareerClick = () => {
-    const projectsSection = document.getElementById("career");
-    if (projectsSection) {
-      projectsSection.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-
-  const handleAIClick = () => {
-    const projectsSection = document.getElementById("zyra-title");
-    if (projectsSection) {
-      projectsSection.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-
   return (
-    <div className="navbar">
-      <div className="nav-item" onClick={handleHomeClick}>
+    <div className={"navbar"}>
+      <div className="nav-item" onClick={() => scrollToSection("about")}>
         About
       </div>
-      <div className="nav-item" onClick={handleProjectsClick}>
+      <div
+        className="nav-item"
+        onClick={() => scrollToSection("projects-section")}
+      >
         Projects
       </div>
-      <div className="nav-item" onClick={handleCareerClick}>
+      <div className="nav-item" onClick={() => scrollToSection("career")}>
         Career
       </div>
-      <div className="nav-item" onClick={handleAIClick}>
+      <div className="nav-item" onClick={() => scrollToSection("zyra-title")}>
         Zyra
       </div>
     </div>
   );
+};
+
+const scrollToSection = (id) => {
+  const section = document.getElementById(id);
+  if (section) {
+    section.scrollIntoView({ behavior: "smooth" });
+  }
 };
 
 export default Navbar;
