@@ -1,0 +1,166 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.chat-container {
+  max-width: 800px;
+  margin: 20px auto;
+  margin-bottom: 40px;
+  background: #0c1327; /* Darker container */
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* More pronounced shadow */
+  padding: 20px;
+}
+
+.loading-message {
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #1f1f1f; /* Darker background for loading message */
+  color: #ffcc00; /* Bright color for loading text */
+  text-align: center;
+}
+
+.empty-chat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 170px;
+  gap: 20px;
+  color: #ccc;
+}
+
+.chat-title {
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.chat-box {
+  border: 1px solid #333; /* Dark border */
+  border-radius: 8px;
+  padding: 10px;
+  height: 200px;
+  overflow-y: auto;
+  background-color: #242b3f; /* Slightly lighter than the container */
+}
+
+.message-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.user-message {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #cbacf9; /* Blue background for user message */
+  color: #000; /* White text */
+  max-width: 100%; /* Limit width */
+  word-wrap: break-word; /* Break long words */
+}
+
+.zyra-message {
+  display: flex;
+  gap: 5px;
+  text-align: left;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #444; /* Dark background for Zyra's message */
+  color: #ffffff; /* White text */
+  max-width: 100%; /* Limit width */
+  word-wrap: break-word; /* Break long words */
+}
+
+.chat-input {
+  width: 100%;
+  border: 1px solid #555; /* Dark border */
+  border-radius: 5px;
+  padding: 10px;
+  margin-top: 10px;
+  resize: none;
+  background-color: #333; /* Dark background for input */
+  color: #ffffff; /* White text for input */
+}
+
+.chat-button {
+  background-color: #6200ea; /* Purple background */
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  width: 100%;
+  transition: background-color 0.3s;
+}
+
+.chat-button:hover {
+  background-color: #3700b3; /* Darker purple on hover */
+}
+
+.chat-button.disabled {
+  background-color: #555; /* Dark grey for disabled button */
+  color: #aaa; /* Lighter grey text for disabled button */
+  cursor: not-allowed; /* Change cursor for disabled button */
+}
+
+@media (max-width: 850px) {
+  .chat-container {
+    max-width: 600px;
+  }
+
+  .chat-title {
+    margin-bottom: 20px;
+  }
+
+  .user-message {
+    font-size: 0.9em;
+  }
+
+  .zyra-message {
+    font-size: 0.9em;
+  }
+}
+
+@media (max-width: 480px) {
+  .chat-container {
+    max-width: 350px;
+  }
+
+  .message-container {
+    padding: 5px;
+  }
+
+  .chat-box {
+    padding: 10px;
+    height: 200px;
+  }
+
+  .chat-title {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+  }
+
+  .user-message {
+    font-size: 0.8em;
+    padding: 5px;
+    border-radius: 5px;
+  }
+
+  .zyra-message {
+    font-size: 0.8em;
+    padding: 5px;
+    border-radius: 5px;
+  }
+
+  .chat-input {
+    height: 50px;
+  }
+}

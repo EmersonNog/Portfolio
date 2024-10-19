@@ -7,10 +7,12 @@ import About from "../../Pages/About/About";
 import Projects from "../../Pages/Project/Project";
 import TimelineComponent from "../../Components/TimelineComponent/TimelineComponent";
 import AnimatedSection from "../../Components/Animate/Animate";
+import Tecnologies from "../Tecnologies/Tecnologies";
 import "./Home.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Details from "../Details/Details";
+import ArtificialIntelligence from "../IA/AI";
 
 function Home() {
   return (
@@ -35,6 +37,8 @@ function Home() {
         <Projects />
         <TimelineComponent />
         <Details />
+        <ArtificialIntelligence />
+        <Tecnologies />
       </div>
     </div>
   );
