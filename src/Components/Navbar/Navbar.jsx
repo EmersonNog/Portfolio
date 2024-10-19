@@ -23,6 +23,13 @@ const Navbar = () => {
     }
   };
 
+  const handleAIClick = () => {
+    const projectsSection = document.getElementById("zyra-title");
+    if (projectsSection) {
+      projectsSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <div className="navbar">
       <div className="nav-item" onClick={handleHomeClick}>
@@ -34,7 +41,9 @@ const Navbar = () => {
       <div className="nav-item" onClick={handleCareerClick}>
         Career
       </div>
-      <div className="nav-item">Contact</div>
+      <div className="nav-item" onClick={handleAIClick}>
+        Zyra
+      </div>
     </div>
   );
 };

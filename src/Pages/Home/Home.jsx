@@ -13,6 +13,8 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Details from "../Details/Details";
 import ArtificialIntelligence from "../IA/AI";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGear } from "@fortawesome/free-solid-svg-icons";
 
 function Home() {
   return (
@@ -39,6 +41,12 @@ function Home() {
         <Details />
         <ArtificialIntelligence />
         <Tecnologies />
+
+        <h1>(Building Footer...)</h1>
+        <br />
+        <FontAwesomeIcon icon={faGear} size="3x" />
+        <br />
+        <br />
       </div>
     </div>
   );

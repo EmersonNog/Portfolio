@@ -23,7 +23,7 @@ const ChatComponent = () => {
     setAnswer("");
 
     const zyraIntro =
-      "Você é Zyra, uma assistente virtual. Seu criador é o Emerson, mas todos o conhecem por Nogueira. Responda as perguntas com empatia, profissionalismo e em um tamanho de resposta médio.";
+      "Você é Zyra, uma assistente virtual. Seu criador é o Nogueira. Responda as perguntas com empatia, profissionalismo e em um tamanho de resposta médio. Se a pergunta for feita em um idioma diferente do português, responda na mesma língua.";
 
     const conversationContext =
       chatHistory
