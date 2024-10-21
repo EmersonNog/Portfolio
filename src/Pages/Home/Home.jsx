@@ -25,8 +25,8 @@ function Home() {
         <Projects />
         <TimelineComponent />
         <Details />
-        <Contact />
         <ArtificialIntelligence />
+        <Contact />
         <Tecnologies />
         <Footer />
       </div>
