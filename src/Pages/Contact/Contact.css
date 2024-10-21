@@ -1,0 +1,37 @@
+.email-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 60px;
+}
+
+.email-container span {
+  color: #c1c2d3;
+  font-weight: 500;
+  margin-bottom: 40px;
+}
+
+.email-title {
+  font-size: 3rem;
+  margin: 20px 0 30px 0;
+  width: 700px;
+}
+
+.email-title span {
+  color: #cbacf3;
+}
+
+@media (max-width: 767px) {
+  .email-title {
+    font-size: 2.3rem;
+    width: 450px;
+  }
+}
+
+@media (max-width: 480px) {
+  .email-title {
+    font-size: 2.3rem;
+    width: 370px;
+  }
+}

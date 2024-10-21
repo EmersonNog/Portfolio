@@ -1,0 +1,96 @@
+.form {
+  background-color: #111225;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  width: 800px;
+}
+
+.form label {
+  margin-bottom: 5px;
+}
+
+.input,
+.textarea {
+  background-color: #1c1d3a;
+  color: #fff;
+  border: 1px solid #333;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  padding: 15px;
+  font-size: 16px;
+  width: 100%;
+}
+
+.textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.input::placeholder,
+.textarea::placeholder {
+  color: #6f728a;
+}
+
+.button {
+  background: linear-gradient(90deg, #9b43b6, #e91e63);
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  padding: 15px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s ease;
+  position: relative;
+}
+
+.arrow-icon {
+  transition: transform 0.3s ease;
+  margin-left: 10px;
+}
+
+.button:hover {
+  background: linear-gradient(90deg, #e91e63, #9b43b6);
+}
+
+.button:hover .arrow-icon {
+  transform: translateX(5px);
+}
+
+@media (max-width: 1115px) {
+  .form {
+    width: 600px;
+  }
+}
+
+@media (max-width: 650px) {
+  .form {
+    width: 450px;
+  }
+
+  .input,
+  .textarea {
+    padding: 12px;
+    font-size: 12px;
+  }
+
+  .form label {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .form {
+    padding: 20px;
+    width: 370px;
+  }
+
+  .input::placeholder,
+  .textarea::placeholder {
+    font-size: 12px;
+  }
+}

@@ -16,6 +16,12 @@ const Navbar = () => {
       <div className="nav-item" onClick={() => scrollToSection("career")}>
         Career
       </div>
+      <div
+        className="nav-item"
+        onClick={() => scrollToSection("email-container")}
+      >
+        Contact
+      </div>
       <div className="nav-item" onClick={() => scrollToSection("zyra-title")}>
         Zyra
       </div>
