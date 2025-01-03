@@ -7,6 +7,7 @@ import AnimatedSection from "../Animate/Animate";
 import Certare from "../../Assets/Images/logos/certare.jpg";
 import Facepe from "../../Assets/Images/logos/facepe.png";
 import Fapepi from "../../Assets/Images/logos/fapepi.png";
+import America from "../../Assets/Images/logos/america.png";
 import "react-vertical-timeline-component/style.min.css";
 import "./TimelineComponent.css";
 
@@ -29,13 +30,21 @@ function TimelineComponent() {
       keyWords: ["Innovation", "Development", "Data Science"],
     },
     {
-      date: "March 2024 - June 204",
+      date: "March 2024 - June 2024",
       title:
         "Foundation for the Support of Science and Technology of the State of Pernambuco",
       description:
         "I worked on developing a Web GIS platform that provides predictive analyses of risk areas by integrating data from satellite images, sensors, government information, and drones. The goal is to prevent and manage crises related to heavy rainfall in urban slopes.",
       icon: Facepe,
       keyWords: ["Innovation", "Development", "Web GIS"],
+    },
+    {
+      date: "December 2024 - the moment",
+      title: "America Drugstores",
+      description:
+        "I developed a delivery application for pharmaceutical products, incorporating multiple pharmacy branches. The app includes route integration, real-time mapping, and was built with a custom API to handle logistics, user interactions, and seamless data synchronization across all units.",
+      icon: America,
+      keyWords: ["Development", "Mobile", "Delivery", "Mapping", "API"],
     },
   ];
 

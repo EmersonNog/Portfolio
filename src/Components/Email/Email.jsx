@@ -1,8 +1,6 @@
 import { useState } from "react";
 import emailjs from "@emailjs/browser";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
-import "@fortawesome/fontawesome-free/css/all.min.css";
+import { toast } from "react-toastify";
 import "./Email.css";
 
 function Email() {
@@ -46,40 +44,37 @@ function Email() {
   }
 
   return (
-    <>
-      <form className="form" onSubmit={sendEmail}>
-        <label htmlFor="">Name</label>
-        <input
-          className="input"
-          type="text"
-          placeholder="Your name..."
-          onChange={(e) => setName(e.target.value)}
-          value={name}
-        />
+    <form className="form" onSubmit={sendEmail}>
+      <label htmlFor="">Name</label>
+      <input
+        className="input"
+        type="text"
+        placeholder="Your name..."
+        onChange={(e) => setName(e.target.value)}
+        value={name}
+      />
 
-        <label htmlFor="">Email Address</label>
-        <input
-          className="input"
-          type="email"
-          placeholder="email@gmail.com"
-          onChange={(e) => setEmail(e.target.value)}
-          value={email}
-        />
+      <label htmlFor="">Email Address</label>
+      <input
+        className="input"
+        type="email"
+        placeholder="email@gmail.com"
+        onChange={(e) => setEmail(e.target.value)}
+        value={email}
+      />
 
-        <label htmlFor="">Message</label>
-        <textarea
-          className="textarea"
-          placeholder="Your message..."
-          onChange={(e) => setMessage(e.target.value)}
-          value={message}
-        />
+      <label htmlFor="">Message</label>
+      <textarea
+        className="textarea"
+        placeholder="Your message..."
+        onChange={(e) => setMessage(e.target.value)}
+        value={message}
+      />
 
-        <button className="button" type="submit">
-          Send Feedback <i className="fas fa-arrow-right arrow-icon"></i>
-        </button>
-      </form>
-      <ToastContainer />
-    </>
+      <button className="button" type="submit">
+        Send Feedback <i className="fas fa-arrow-right arrow-icon"></i>
+      </button>
+    </form>
   );
 }
 
