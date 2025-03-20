@@ -10,6 +10,7 @@ import ArtificialIntelligence from "../IA/AI";
 import Footer from "../../Components/Footer/Footer";
 import Introduction from "../Introduction/Introduction";
 import Contact from "../Contact/Contact";
+import Book from "../Book/Book";
 import "./Home.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -27,6 +28,7 @@ function Home() {
         <Projects />
         <TimelineComponent />
         <Details />
+        <Book />
         <ArtificialIntelligence />
         <Contact />
         <Tecnologies />
