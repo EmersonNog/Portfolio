@@ -101,6 +101,14 @@
   transition: background-color 0.3s;
 }
 
+.markdown-content {
+  display: block;
+  white-space: normal;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  max-width: 100%;
+}
+
 .chat-button:hover {
   background-color: #3700b3;
 }
