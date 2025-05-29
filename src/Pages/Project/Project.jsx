@@ -24,6 +24,11 @@ import Plugin3 from "../../Assets/Images/projects/plugin3.jpg";
 import Reurb1 from "../../Assets/Images/projects/reurb1.png";
 import Reurb2 from "../../Assets/Images/projects/reurb2.png";
 import Reurb3 from "../../Assets/Images/projects/reurb3.png";
+import EnvioX1 from "../../Assets/Images/projects/enviox_history.jpeg";
+import EnvioX2 from "../../Assets/Images/projects/enviox_login.jpeg";
+import EnvioX3 from "../../Assets/Images/projects/enviox_map.jpeg";
+import EnvioX4 from "../../Assets/Images/projects/enviox_mapping.jpeg";
+import EnvioX5 from "../../Assets/Images/projects/enviox_route.jpeg";
 
 const Projects = () => {
   return (
@@ -82,6 +87,18 @@ const Projects = () => {
             ]}
             buttonText="Check Repository"
             link="https://github.com/EmersonNog/webgis-geoserver-caucaia"
+          />
+          <ProjectCard
+            images={[EnvioX1, EnvioX2, EnvioX3, EnvioX4, EnvioX5]}
+            title="Delivery App for commercial networks"
+            description="EnvioX is an agile and intuitive delivery app, aimed at companies that want to manage product shipping in a digital, secure and automated way. The app is fully integrated with its own API developed in Python, which manages the registration of users, products and addresses in real time."
+            technologies={[
+              { name: "Flutter", logo: FlutterIcon },
+              { name: "Python", logo: PythonIcon },
+              { name: "PostgreSQL", logo: PostgresIcon },
+            ]}
+            buttonText="Check Live Site"
+            link="http://enviox.tcainovacao.com.br/"
           />
         </div>
       </section>

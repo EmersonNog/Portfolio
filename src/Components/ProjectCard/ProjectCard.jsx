@@ -1,8 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import "./ProjectCard.css";
 import Slider from "react-slick";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
+import { faPaperPlane, faTimes } from "@fortawesome/free-solid-svg-icons";
 
 const ProjectCard = ({
   images,
@@ -13,6 +13,8 @@ const ProjectCard = ({
   buttonText,
   link,
 }) => {
+  const [modalImage, setModalImage] = useState(null);
+
   const settings = {
     speed: 1200,
     slidesToShow: 1,
@@ -29,6 +31,7 @@ const ProjectCard = ({
                 src={image}
                 alt={`${title} - ${index}`}
                 className="project-image"
+                onClick={() => setModalImage(image)}
               />
             </div>
           ))}
@@ -57,6 +60,20 @@ const ProjectCard = ({
           <FontAwesomeIcon icon={faPaperPlane} className="send-icon" />
         </div>
       </div>
+
+      {/* Modal */}
+      {modalImage && (
+        <div className="modal-overlay" onClick={() => setModalImage(null)}>
+          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+            <FontAwesomeIcon
+              icon={faTimes}
+              className="modal-close"
+              onClick={() => setModalImage(null)}
+            />
+            <img src={modalImage} alt="Preview" className="modal-image" />
+          </div>
+        </div>
+      )}
     </div>
   );
 };
