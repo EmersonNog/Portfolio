@@ -16,7 +16,7 @@ const AdBanner = () => {
       className="adsbygoogle"
       style={{ display: "block" }}
       data-ad-client="ca-pub-7113599431651787"
-      data-ad-slot="YYYYYYYYYY"
+      data-ad-slot="9525083299"
       data-ad-format="auto"
       data-full-width-responsive="true"
     ></ins>
